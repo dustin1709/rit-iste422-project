@@ -10,7 +10,7 @@ javac -d ./build -cp lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar src/*/java/*.j
 if [ $? -ne 0 ] ; then echo BUILD FAILED!; exit 1; fi
 
 echo "Running unit tests..."
-java -cp .:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore EdgeConnectorTest
+java -cp build:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore EdgeConnectorTest
 if [ $? -ne 0 ] ; then echo TESTS FAILED!; exit 1; fi
 
 echo "Running application..."
